@@ -1,0 +1,138 @@
+== Restaurant Puzzle Solution
+This is the readme file for the solution of restaurant puzzle.
+
+== Dependencies
+  This code id developed and tested on ruby 1.8.7 (patchlevel 358) [i686-linux], Ruby Enterprise Edition
+  This should work with ruby 1.8.7 too fine but the testing was done only on
+  Ruby enterprice edition mentioned above.
+
+  In case need to install REE - http://www.rubyenterpriseedition.com/download.html
+
+== Code Structure
+
+code
+  |
+   - restaurant_finder.rb
+   - find_restaurants.rb
+   - test
+      |
+       - restaurant_finder_test.rb
+       - (csv sample files for test data)
+   - README
+
+
+== Assumptions
+1. Assumed that the input file is present in the same direcorty as restaurant_finder.rb
+   So, please copy your input file to the 'best_restuarant_puzzle' directory and run "find_restaurants.rb"
+
+== To Run
+1)  Script - Go to the directory which has this script and type (ex- best_restuarant_puzzle)
+
+    ruby find_restaurants.rb [datafile] [item list seperated by space]
+    Ex - ruby find_restaurants.rb sample_data.csv burger pizza
+
+2) Tests - Go to the directory which has test file and type (ex- best_restuarant_puzzle/test)
+   ruby restaurant_finder_test.rb
+
+== Sample ruby find_restaurants.rb input and outputs
+
+
+----------------------------
+Data File data.csv
+1, 4.00, burger
+1, 8.00, tofu_log
+2, 5.00, burger
+2, 6.50, tofu_log
+
+Program Input
+ruby find_restaurants.rb data.csv burger tofu_log
+
+Output
+"2, 11.5"
+---------------------------
+
+
+----------------------------
+----------------------------
+Data File data.csv
+1, 4.00, burger
+1, 8.00, tofu_log
+2, 6.00, burger
+2, 6.00, tofu_log
+
+Program Input
+ruby find_restaurants.rb data.csv burger tofu_log
+
+Output
+"1, 12"
+"2, 12"
+---------------------------
+
+
+----------------------------
+
+Data File data.csv
+3, 4.00, chef_salad
+3, 8.00, steak_salad_sandwich
+4, 5.00, steak_salad_sandwich
+4, 2.50, wine_spritzer
+
+Program Input
+ruby find_restaurants.rb chef_salad wine_spritzer
+
+Output
+nil
+---------------------------
+
+
+----------------------------
+Data File data.csv
+5, 4.00, extreme_fajita
+5, 8.00, fancy_european_water
+6, 5.00, fancy_european_water
+6, 6.00, extreme_fajita, jalapeno_poppers, extra_salsa
+
+Program Input
+ruby find_restaurants.rb fancy_european_water extreme_fajita
+
+Output
+=> "6, 11.0"
+---------------------------
+
+-------------------------------
+Program Input
+ruby find_restaurants.rb
+
+Output
+"Invalid arguments!"
+"Please run the script as shown below."
+"ruby restaurant_finder.rb sample.csv item1 item2"
+nil
+
+----------------------------------
+
+----------------------------
+4, 4.09, pizza
+4, 7.00, french_fries
+4, 5.00, coke, french_fries
+6, 8.10, pizza, coke
+6, 7.00, french_fries
+5, 9.08, pizza, french_fries, coke
+
+Program Input
+ruby find_restaurants.rb a.csv coke french_fries pizza
+
+Output
+=> "5, 9.08"
+
+Program Input
+ruby find_restaurants.rb a.csv coke french_fries
+
+Output
+=> "4, 5.00"
+
+Program Input
+ruby find_restaurants.rb a.csv french_fries pizza
+
+Output
+=> "5, 9.08"

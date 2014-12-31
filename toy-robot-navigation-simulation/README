@@ -1,0 +1,73 @@
+== Toy Robot Navigator 
+
+  This is the readme file for an the code which attempts at simulating the navigation of a toy robot on a table top without letting it fall.
+
+== Dependencies
+  
+  This code is developed and tested on ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-linux].
+  This should work with all versions of ruby > 1.9.2. (used 'require_relative' method which is ruby 1.9.2+ compatible only. 
+  Just change it incase to support earlier versions of ruby)
+
+== Code Structure
+
+  code
+    |
+     - robot_navigator.rb
+     - robot_navigator
+        |
+         - commander.rb
+         - directions.rb
+         - navigator.rb
+         - pretty_print.rb
+         - robot.rb
+         - table.rb
+     - test
+        |
+         - robot_navigator_test.rb
+         - (sample files for test data)
+     - README
+
+== Assumptions
+
+1) Robot moves only along the known directions north, west, east and south.
+2) Robot can only turn either left or right.
+3) Robot always takes equi-distant steps.
+
+== To Run
+
+  1)  Script - Go to the directory which has this script and type (ex- code)
+
+      Input can be provided to the script in two ways a) interactively & b) Through file
+
+      a) Interactively - 
+
+          run - ruby robot_navigator.rb (Enter commands one by one and press return key after each command)
+          Ex - ruby robot_navigator.rb
+          >> PLACE 0,2,SOUTH
+          >> MOVE
+          >> LEFT
+          >> REPORT
+          >> quit
+
+      b) Through file - 
+
+          run - ruby robot_navigator.rb [file_path_with_commands]
+          Ex - ruby robot_navigator.rb sample_commands.txt
+
+
+  2) Tests - TEsts are written with ruby unit testing framework. 
+      Go to the directory which has test file and type (ex- code)
+      ruby test/robot_navigator_test.rb
+
+      A Sample Run - 
+
+      >>  ruby test/robot_navigator_test.rb
+
+          Run options: 
+
+          # Running tests:
+
+          Finished tests in 0.005982s, 2340.4299 tests/s, 7021.2897 assertions/s.              
+          14 tests, 42 assertions, 0 failures, 0 errors, 0 skips
+
+          ruby -v: ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-linux]
