@@ -2,6 +2,10 @@
 
   This is the readme file for an the code which attempts at simulating the navigation of a toy robot on a table top without letting it fall.
 
+Please read problem_description.txt for detailed description of the problem.
+
+
+
 == Dependencies
   
   This code is developed and tested on ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-linux].
