@@ -10,3 +10,6 @@ The list of the snippets -
 1. Best Resturant Puzzle
 
 2. Toy Robot Navigation Simulation
+
+3. Conway's Game of Life
+
