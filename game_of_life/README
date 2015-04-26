@@ -1,0 +1,18 @@
+== Conway's Game of Life
+Puzzle description - http://en.wikipedia.org/wiki/Conway's_Game_of_Life
+
+This is the readme file for the solution.
+
+== Dependencies
+  This code is developed and tested on ruby 2.1.0. Should work on any ruby 1.8.7+ versions
+== Code Structure
+
+code
+  |
+   - game_of_life.rb  #Where all the logic resides.
+   - sample_run.rb  #Shows to run the file game_of_life.rb
+   - test
+      |
+       - game_of_life_test.rb (Very basic tests.)
+   - README
+
