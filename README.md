@@ -1,7 +1,7 @@
 ruby-snippets
 =============
 
-Collection of my code snippets which solve some general programmig problems. 
+My solutions to some general programmig problems. 
 
 Each puzzle/problem has problem_description file which states the problem, sample input data files and a README file that describes how to run the code.
 
